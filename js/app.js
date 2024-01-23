@@ -17,3 +17,6 @@ const footer = document.getElementsByTagName('footer');
 const main = document.getElementsByTagName('main');
 // First Child of Main Container - Page Identity
 const header = document.getElementsByTagName('header');
+// Two SECTIONS used for product promotion 
+const product1 = document.querySelector('.product__new--1');
+const product2 = document.querySelector('.product__new--2');
