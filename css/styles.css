@@ -100,7 +100,8 @@ body .container {
     justify-content: center;
     align-items: center;
     width: 100%;
-    row-gap: 1rem;
+    min-height: 100svh;
+    row-gap: 2rem;
 }
 
 header,
@@ -109,6 +110,7 @@ nav {
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
+    padding: 0.5rem 0.5rem;
 }
 
 nav .nav__main--5 {
@@ -127,9 +129,11 @@ nav .nav__main--5 {
 
 main {
     width: 100%;
+    min-height: 40svh;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    padding: 0.5rem 0;
 }
 
 main > * {
@@ -145,6 +149,10 @@ main section {
     color: blueviolet;
     text-shadow: 0 0.1rem 0.125rem blue;
     letter-spacing: 0.1rem;
+    border-radius: 4rem;
+    box-shadow: 0.5rem 0.25rem 0.25rem  0.25rem blue, -0.5rem 0.25rem 0.25rem  0.25rem rgb(91, 15, 126);
+    min-width:35svw;
+    border: none;
 }
 
 /*  links to popular sites  */
@@ -183,6 +191,7 @@ ul li a {
     font-weight: 600;
     color: blue;
     letter-spacing: 0.1rem;
+    transition: all 500ms;
 }
 
 ul li a:hover {
@@ -196,12 +205,19 @@ ul li a:hover {
     padding: 0.5rem;
 }
 
+.product__new--1 h2,
+.product__new--2 h2 {
+    padding: 0.5rem;
+}
+
 footer {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: end;
     color: rgba(138, 43, 226, 0.4);
     text-shadow: 0 0.1rem 0.125rem rgba(0, 0, 255, 0.4);
     letter-spacing: 0.1rem;
     font-weight: 500;
+    width: 100%;
+    min-height: 20svh;
 }
