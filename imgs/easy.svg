@@ -1,0 +1,8 @@
+                <svg id="easy" width="155" height="100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    
+                    <text x="10" y="70"
+                        style="
+                            fill:green; stroke-width:4px; stroke-style:solid;stroke-color:purple;font-size:4rem;letter-spacing:0.1rem;line-height:1.1;font-weight:700;
+                        ">Easy</text>
+                
+                </svg>

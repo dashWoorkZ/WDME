@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/styles.css">
+  <title>SVG Title</title>
+</head>
+<body>
+  <svg width="750" height="300" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <path id="my_path" d="M 60,60 C 80,210 630,40 150,20" fill="skyblue" />
+    <path id="titlt_path" d="M 75,65 C 80,170 590,40 150,30" fill="rgb(156, 117, 156)" />
+ 
+    <text>
+      <textPath  href="#my_path">
+        Web Design Made Easy
+      </textPath>
+    </text>
+   
+    <style>
+        text{
+          dominant-baseline: hanging;
+          font: 28px Verdana, Helvetica, Arial, sans-serif;
+          letter-spacing: 0.1rem;
+          fill: blue;
+          stroke: 0.2rem solid purple;
+        }
+    </style>
+  </svg>
+
+</body>
+</html>
+

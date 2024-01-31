@@ -1,0 +1,8 @@
+                <svg id="design" width="200" height="100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    
+                    <text x="4" y="70"
+                        style="
+                            fill: red; stroke: 0.6rem solid purple;font-size:4rem;letter-spacing:0.1rem;line-height:1.1;font-weight:700;
+                        ">Design</text>
+                
+                </svg>

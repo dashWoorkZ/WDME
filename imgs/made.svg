@@ -1,0 +1,8 @@
+                <svg id="made" width="175" height="100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    
+                    <text x="7" y="70"
+                        style="
+                            fill: purple; stroke: 0.2rem solid purple;font-size:4rem;letter-spacing:0.1rem;line-height:1.1;font-weight:700;
+                        ">Made</text>
+                
+                </svg>
