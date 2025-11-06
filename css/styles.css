@@ -2,11 +2,24 @@
 
 :root {
     --inline-padding: 1.5rem 2.5rem;
+          
+    --pad05rem: 0.5rem;
+    --pad1rem: 1rem;
+    --pad2rem: 2rem;
+    --clr-primary: rgb(0, 0, 255);
+    --clr-secondary: rgb(128, 0, 128);
+    --clr-accent-1: rgb(218, 165, 32);
+    --clr-accent-2: rgb(255, 165, 0);
+    --clr-accent-3: rgb(255, 0, 0);
+    --clr-accent-4: rgb(0, 128, 0);
+    --clr-nav-bg: rgba(0, 0, 255, 0.2);
+    --clr-hamburger: rgba(128, 0, 128, 0.6);
+  --li-hover-bg: rgba(128, 0, 128, 0.3);
+  --maxWidth: 100svw;
+  --maxHeight: 100svh;
+     
 }
 
-html {
-    hanging-punctuation: first last;
-}
 
 @media (prefers-reduced-motion: no-preference) {
     :has(:target) {
@@ -14,9 +27,6 @@ html {
         scroll-padding-top: 3rem;
     }
 }
-
-/* ================================= */
-
 
 *,
 *::after,
@@ -48,6 +58,7 @@ svg,
 video {
     display: block;
     max-width: 100%;
+    box-sizing: border-box;
 }
 
 p {
@@ -55,6 +66,419 @@ p {
     line-height: 2;
     text-wrap: pretty
 }
+
+html {
+    hanging-punctuation: first last;
+}
+
+     html,
+        body {
+            box-sizing: border-box;
+            min-inline-size: 100svw;
+            min-block-size: 100dvh;
+            padding-inline: 0;
+            padding-block: 0;
+        }
+        body {
+            display: grid;
+            place-content: center;
+        }
+
+        .container {
+            flex-direction: column;
+        }
+
+        header,
+        .container,
+        aside,
+        li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header {
+            max-inline-size: calc(var(--maxWidth) - 2rem);
+            padding: var(--pad1rem) var(--pad05rem);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;  
+        }
+
+        header section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+         .hamburger {
+            opacity: 0;
+            visibility: hidden;
+            display: none;
+            transition: all 1000ms ease-in-out;
+        }
+
+        .navigation {
+            height: 6.5rem;
+            }
+            
+            .links {
+            inline-size: 80rem;
+            }
+
+         #hdrNav {
+            display: grid;
+            max-width: calc(var(--maxWidth) - 2rem);
+            width: 100%;
+            grid-template-columns: aut-fit minmax(25rem, 1fr);
+            justify-content: center;
+            padding: var(--pad05rem);
+            animation: reveal 1000ms ease-in-out forwards; 
+            gap: var(--pad1rem);
+            opacity: 1;
+            visibility: visible;
+            right: 0.5rem;
+        }
+
+        #hdrNav li {
+            border: 0.2rem solid var(--clr-accent-4);
+            border-radius: 0.5rem;
+            padding-inline: 1rem;
+            padding-block: 0.5rem;
+            font-weight: 700;
+        }
+            
+        .links ul {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+            width: 100%;
+            
+        
+            & li {
+            font-size: 2rem;
+            color: green;
+            text-shadow: 0 0.1rem 0.4rem rebeccapurple;
+            font-weight: bold;
+            letter-spacing: 0.1rem;
+            line-height: 1.2;
+            transition: all 1000ms ease-in-out;
+             
+            
+                & :hover {
+                color: gold;
+                text-shadow: 0 -0.1rem 0.4rem green;
+                }
+            } 
+        
+        }
+
+        .products {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            
+                & section {
+                flex-basis: 1;
+                justify-content: center;
+                align-items: center;
+                transition: all 1000ms ease-in-out;
+                
+                    & h2 {
+                        color: orange;
+                        text-shadow: 0 0.05rem 0.01rem green;
+                        font-weight: 700;
+                        font-size: 1.2rem;
+                        
+                        
+                        
+                        &:hover {
+                        color: dodgerblue;
+                        text-shadow: 0 0.05rem 0.01rem green;
+                        }
+                }
+        }  
+    }
+
+    aside {
+            max-width: calc(var(--maxWidth) - (var(--pad1rem) * 2));
+            inline-size: 100%;
+            justify-content: space-between;
+            height: auto;
+            gap: 1rem;
+            position: relative;
+            padding: var(--pad05rem) var(--pad1rem);
+        }
+        
+        .logo {
+            max-inline-size: 10rem;
+            }
+        
+        #login {
+        display: grid;
+        min-height: 5rem;
+        inline-size: 100%;
+        place-content:center;
+        }
+        
+        #login h1 {
+        width: 100%;
+        letter-spacing: 1rem;
+        line-height: 1.2;
+        font-weight: 800;
+        color: dodgerblue;
+        text-shadow: 0 0.2rem 0.2rem gold, 0.2rem 0.2rem 0.2rem blue;
+        font-size: clamp(1.5rem, 1.75rem, 2rem);
+        margin-inline: auto;
+        text-align: center;
+        
+            &:hover {
+                color: green;
+                text-shadow: 0 0.2rem 0.2rem  antiquewhite, -0.2rem 0.2rem 0.2rem orangered;
+        
+            }
+        }
+
+        .loginBtn {
+            border: 0.2rem groove dodgerblue;
+            font-weight: 700;
+            letter-spacing: 0.1rem;
+            font-size: clamp(1rem, 1.2ch, 1.5rem);
+            background-color: antiquewhite;
+            color: dodgerblue;
+            text-shadow: 0 0.1rem 0.2rem blue;
+            padding-block: 0.5rem;
+            padding-inline: 1rem;
+            border-radius: 0.5rem;
+        }
+
+    footer {
+        max-inline-size: 100%;
+    }
+
+footer {
+    max-inline-size: 90%;
+    margin-inline: auto;
+}
+footer div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            inline-size: 80%;
+            margin-inline: auto;
+            padding-block: 0.5rem;
+            padding-inline: 1rem;
+            width: 100%;
+
+            & h3 {
+            color: dodgerblue;
+            text-shadow: 0 0.05rem 0.01rem green;
+            font-weight: 700;
+            flex-basis: 1;
+            font-size: clamp(0.8rem, 1ch, 1.2rem);
+            text-align: center;
+            
+            }
+        }
+
+@media (max-width: 25rem) {
+        
+        header,
+        header section #navigation {
+            flex-direction: column;
+        }
+
+        header {
+            flex-direction: column;
+            inline-size: 95%;
+            margin-inline: auto;
+        }
+
+}
+
+@media (min-width: 25rem) {
+
+        header {
+            max-inline-size: calc(var(--maxWidth) - 2rem);
+            min-width: 80rem;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        header section {
+            max-inline-size: 81.25rem;
+            justify-content: space-between;
+            }
+
+
+        .hamburger {
+            opacity: 1;
+            visibility: visible;
+            display: block inline;
+            width: 3svw;
+            top: 1rem;
+            left: 1rem;
+        }
+            
+        .navigation {
+            height: 6.5rem;
+            }
+            
+            .links {
+            inline-size: 80rem;
+            }
+            
+        .links ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;  
+        }
+
+        #login h1 {
+
+        color: gold;
+        text-shadow: 0 0.1rem 0.4rem rebeccapurple;
+        font-size: 5rem;
+       
+            &:hover {
+                color: green;
+                 text-shadow: 0 -0.2rem 0.2rem  antiquewhite, -0.2rem 0.2rem 0.2rem orangered;
+            }
+        }
+              
+        #hdrNav {
+            display: none;
+            width: 80rem;
+            justify-content: space-evenly;
+            padding: var(--pad05rem);
+            background-color: var(--clr-nav-bg);
+            border: 0.3rem solid var(--clr-accent-4);
+            outline: 0.4rem ridge var(--clr-accent-2);
+            outline-offset: 0.125rem;
+            border-radius: 0.4rem;
+            animation: reveal 1000ms ease-in-out forwards; 
+            gap: var(--pad1rem);
+            opacity: 0;
+            visibility: hidden;
+            right: 0.5rem;
+        }
+
+        @keyframes reveal {
+            0% {
+                width: 43rem;
+                opacity: 0;
+                visibility: hidden;
+                display: none;
+            }
+            100% {
+                width: 80rem;
+                opacity: 1;
+                visibility: visible;
+                display: flex;
+            }
+        }
+       
+       @keyframes hide {
+            100% {
+                opacity: 0;
+                visibility: hidden;
+                width: 45rem;
+                display: none;
+            }
+            0% {
+                width: 80rem;
+                opacity: 1;
+                visibility: visible;
+                display: flex;
+            }
+        } 
+        
+       #hdrNav li {
+            padding: var(--pad05rem) var(--pad1rem);
+            list-style: none;
+            border: 0.2rem solid var(--clr-primary);
+            border-radius:  0.4rem;
+            max-width: 15rem;
+            transition: all 500ms ease;
+        }
+
+
+#hdrNav li:hover {
+  border: 0.2rem solid var(--clr-secondary);
+  background-color: var(--li-hover-bg);
+}
+        #hdrNav li a {
+            text-decoration: none;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 0.1rem;
+            line-height: 1.5;
+            color: var(--clr-primary);
+            text-shadow: 0 0.1rem 0.2rem gold;
+          transition: all 500ms ease-in-out;
+          background-color: transparent;
+        }
+
+#hdrNav li a:hover {
+              color: gold;
+             text-shadow: 0 0.1rem 0.2rem var(--clr-primary);
+             transition: all 500ms ease-in-out;
+  
+}
+
+        .button-three {
+                background: transparent;
+                border: 10px solid var(--button-color, #bc0fd3);
+                border-radius: 1rem;
+            }
+
+        .button-three {
+            --button-color: rgba(0, 9, 128, 0.4);
+            overflow: hidden;
+            }
+
+            .button-three .hamburger {
+            transition: translate 1s, rotate 1s;
+            }
+
+            .button-three[aria-expanded="true"] .hamburger {
+            translate: 5px -5px;
+            rotate: 0.122turn;
+            }
+
+            .button-three .line {
+            transition: 1s;
+            stroke-dasharray: 60 31 60 300;
+            }
+
+            .button-three[aria-expanded="true"] .line {
+            stroke-dasharray: 60 107 60 300;
+            stroke-dashoffset: -90;
+            }
+
+            .btn {
+            rotate: 0;
+            scale: 1;
+            max-width: 14.5rem;
+            transition: all 500ms ease-in-out;
+            }
+
+            .btn:hover {
+            --button-color: #c97106;
+            rotate:360deg;
+            scale: .8;
+            }
+
+/* ================================= */
 
 button {
     color: blue;
@@ -82,6 +506,19 @@ button:hover {
 aside h2 {
     color: beige;
     text-shadow: 0 0.1rem 0.1rem blue;
+}
+
+.products {
+    flex-direction: row;
+    justify-content: space-between;
+    }
+
+    footer div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        min-inline-size: 80svw;
+    }
 }
 
 /* ======================================== */
@@ -116,5 +553,3 @@ aside h2 {
 } */
 
 /* ======================================= */
-
-
