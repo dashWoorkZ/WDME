@@ -4,25 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+   
+      
+    </style>
     <title>Web Design Made Easy</title>
 </head>
 <body>
     <div class="container">
         <header>
-            <img src="imgs/brandName_Logo--200.png" alt="Brand Name Logo" class="logo">
-            <span class="brandNameTitle">
-                Brand Name
-            </span>
-            <button class="login">Log In</button>
-        </header>
-        <nav>
-            <button class="nav__main--1">home</button>
-            <button class="nav__main--2">about</button>
-            <button class="nav__main--3">projects</button>
-            <button class="nav__main--4">sovereignty</button>
-            <button class="nav__main--5">wdme</button>
-            <button class="nav__main--6">contact</button>
-        </nav>
+            <img src="dss_beaver_logo_sml.png" alt="Brand Name Logo" class="logo">
+            <section>
+                <aside id="login">
+                    <h1 class="brandNameTitle">
+                        dashWoorkZ
+                    </h1>
+                    
+                </aside>
+                <aside id="navigation">
+                    <button class="btn button-three" aria-controls="primary-navigation" aria-expanded="false">
+                        <svg stroke="var(--button-color)" fill="none" class="hamburger" viewBox="-10 -10 120 120" width="250">
+                        <path class="line" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" d="m 20 40 h 60 a 1 1 0 0 1 0 20 h -60 a 1 1 0 0 1 0 -40 h 30 v 70">
+                        </path>
+                        </svg>
+                    </button> 
+                    <nav id="hdrNav">
+                        <li class="hdrNav__link-1"><a href="#">Home</a></li>
+                        <li class="hdrNav__link-2"><a href="#">Sovereign Living</a></li>
+                        <li class="hdrNav__link-3"><a href="#">dashWoorkZ Online</a></li>
+                        <li class="hdrNav__link-4"><a href="#">TeeSpring</a></li>
+                        <li class="hdrNav__link-5"><a href="#">About</a></li>
+                    </nav> 
+                    <button class="loginBtn">Log In</button>
+                </aside>
+            </section>
+    </header>
         <main>
             <aside class="links">
                 <ul>
@@ -40,17 +56,19 @@
                     </li>
                 </ul>
             </aside>
-            <section class="product__new--1">
-                Rasberry Pi 4 Netwok Administration
-            </section>
-            <section class="product__new--2">
-                Mini-Sluice Header
-            </section>
+            <div class="products">
+                <section class="product__new--1">
+                    <h2>Rasberry Pi 4 Netwok Administration</h2>
+                </section>
+                <section class="product__new--2">
+                   <h2> Mini-Sluice Header</h2>
+                </section>
+            </div>
         </main>
         <footer>
-            <p>
-                copyright dashwoorkz &copy;&nbsp;2024
-            </p>
+            <div>
+                <h3>dashwoorkz &copy;&nbsp;2024</h3><h3>dashWoorkZ Sovereign Society&nbsp;&nbsp;Since 2023</h3>
+            </div>
         </footer>
     </div>
 </body>
