@@ -79,15 +79,22 @@ html {
             padding-inline: 0;
             padding-block: 0;
         }
+        
         body {
-            display: grid;
+        display: grid;
             place-content: center;
+            width: var(--maxWidth);
+            min-height: var(--maxHeight);
+            padding: 0 var(--pad1rem);
         }
 
         .container {
             flex-direction: column;
         }
 
+
+ 
+ 
         header,
         .container,
         aside,
@@ -96,8 +103,8 @@ html {
             justify-content: center;
             align-items: center;
         }
-
-        header {
+        
+          header {
             max-inline-size: calc(var(--maxWidth) - 2rem);
             padding: var(--pad1rem) var(--pad05rem);
             display: flex;
@@ -105,13 +112,200 @@ html {
             justify-content: center;
             flex-direction: column;  
         }
-
+        
         header section {
             display: flex;
             flex-direction: column;
             justify-content: center;
             gap: 1rem;
+            align-items: baseline;
         }
+        
+        .navigation {
+            height: 6.5rem;
+            }
+            
+        .links {
+            inline-size: 100%;
+            }
+            
+        .links ul {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+            width: 100%;
+            
+        
+            & li {
+                border: 0.2rem ridge gold;
+                filter: drop-shadow(0 0.1rem 0.2rem rebeccapurple, 0 -0.1rem 0.2rem gold);
+                background-color: beige;
+                border-radius: 0.5rem;
+                
+                & a {
+                    font-size: clamp(1.2rem, 1.5ch, 2rem);
+                    color: dodgerblue;
+                    text-shadow: 0 0.1rem 0.4rem green;
+                    font-weight: bold;
+                    letter-spacing: 0.1rem;
+                    line-height: 1.2;
+                    transition: all 1000ms ease-in-out;
+                    padding-block: 0.5rem;
+                    padding-inline: 1rem;
+                    
+                    }
+             
+            
+                & :hover {
+                color: beige;
+                text-shadow: 0 -0.1rem 0.4rem blue;
+                }
+            } 
+        
+        }
+/*
+
+        #hdrNav {
+            display: none;
+            max-width: calc(var(--maxWidth) - 2rem);
+            width: 80rem;
+            justify-content: space-evenly;
+            padding: var(--pad05rem);
+            background-color: var(--clr-nav-bg);
+            border: 0.3rem solid var(--clr-accent-4);
+            outline: 0.4rem ridge var(--clr-accent-2);
+            outline-offset: 0.125rem;
+            border-radius: 0.4rem;
+            animation: reveal 900ms ease-in-out forwards; 
+            gap: var(--pad2rem);
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        @keyframes reveal {
+            0% {
+                width: 43rem;
+                opacity: 0;
+                visibility: hidden;
+                display: none;
+            }
+            100% {
+                width: 80rem;
+                opacity: 1;
+                visibility: visible;
+                display: flex;
+            }
+        }
+
+        
+       @keyframes hide {
+            100% {
+                opacity: 0;
+                visibility: hidden;
+                width: 45rem;
+                display: none;
+            }
+            0% {
+                width: 80rem;
+                opacity: 1;
+                visibility: visible;
+                display: flex;
+            }
+        } 
+        
+
+        #hdrNav li {
+            padding: var(--pad05rem) var(--pad1rem);
+            list-style: none;
+            border: 0.2rem solid var(--clr-primary);
+            border-radius:  0.4rem;
+            max-width: 15rem;
+            transition: all 500ms ease;
+        }
+
+
+#hdrNav li:hover {
+  border: 0.2rem solid var(--clr-secondary);
+  background-color: var(--li-hover-bg);
+}
+        #hdrNav li a {
+            text-decoration: none;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.5rem;
+            letter-spacing: 0.1rem;
+            line-height: 1.5;
+            color: var(--clr-primary);
+            text-shadow: 0 0.1rem 0.2rem var(--clr-secondary);
+          transition: all 500ms ease;
+          background-color: transparent;
+        }
+
+#hdrNav li a:hover {
+              color: var(--clr-secondary);
+            text-shadow: 0 0.1rem 0.2rem var(--clr-primary);
+  
+}
+
+        .button-three {
+                background: transparent;
+                border: 10px solid var(--button-color, #000);
+                border-radius: 1rem;
+            }
+
+        .button-three {
+            --button-color: rgba(128, 0, 128, 0.4);
+            overflow: hidden;
+            }
+
+            .button-three .hamburger {
+            transition: translate 1s, rotate 1s;
+            }
+
+            .button-three[aria-expanded="true"] .hamburger {
+            translate: 5px -5px;
+            rotate: 0.122turn;
+            }
+
+            .button-three .line {
+            transition: 1s;
+            stroke-dasharray: 60 31 60 300;
+            }
+
+            .button-three[aria-expanded="true"] .line {
+            stroke-dasharray: 60 107 60 300;
+            stroke-dashoffset: -90;
+            }
+
+            .btn {
+            rotate: 0;
+            scale: 1;
+            max-width: 14.5rem;
+            transition: all 500ms ease-in-out;
+            }
+
+            .btn:hover {
+            --button-color: #c97106;
+            rotate:360deg;
+            scale: .8;
+            }
+ 
+ 
+ 
+        header,
+        
+        aside,
+        li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+*/
+      
+
+        
 
          .hamburger {
             opacity: 0;
@@ -120,13 +314,7 @@ html {
             transition: all 1000ms ease-in-out;
         }
 
-        .navigation {
-            height: 6.5rem;
-            }
-            
-            .links {
-            inline-size: 80rem;
-            }
+        
 
          #hdrNav {
             display: grid;
@@ -150,32 +338,7 @@ html {
             font-weight: 700;
         }
             
-        .links ul {
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            gap: 1rem;
-            align-items: center;
-            width: 100%;
-            
-        
-            & li {
-            font-size: 2rem;
-            color: green;
-            text-shadow: 0 0.1rem 0.4rem rebeccapurple;
-            font-weight: bold;
-            letter-spacing: 0.1rem;
-            line-height: 1.2;
-            transition: all 1000ms ease-in-out;
-             
-            
-                & :hover {
-                color: gold;
-                text-shadow: 0 -0.1rem 0.4rem green;
-                }
-            } 
-        
-        }
+     
 
         .products {
             display: flex;
@@ -305,26 +468,46 @@ footer div {
 @media (min-width: 25rem) {
 
         header {
-            max-inline-size: calc(var(--maxWidth) - 2rem);
+            max-inline-size: calc(81.25rem - var(--pad2rem));
             min-width: 80rem;
             flex-direction: column;
             justify-content: space-between;
+            padding: var(--pad1rem) var(--pad05rem);
         }
         
         header section {
-            max-inline-size: 81.25rem;
+            max-inline-size: calc(79.25rem - var(--pad2rem));
             justify-content: space-between;
             }
+            
+       aside {
+            max-width: calc(var(--maxWidth) - (var(--pad1rem) * 2));
+            width: 84svw;
+            justify-content: space-between;
+            height: auto;
+            gap: 1rem;
+            position: relative;
+            padding: var(--pad05rem) var(--pad1rem);
+        }
 
 
         .hamburger {
             opacity: 1;
             visibility: visible;
             display: block inline;
-            width: 3svw;
+            width: 4svw;
             top: 1rem;
             left: 1rem;
         }
+        
+        
+        /*.hamburger {
+            width: 4svw;
+            top: 1rem;
+            right: 1rem;
+
+        }
+        * */
             
         .navigation {
             height: 6.5rem;
