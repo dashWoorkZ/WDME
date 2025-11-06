@@ -20,3 +20,23 @@ const header = document.getElementsByTagName('header');
 // Two SECTIONS used for product promotion 
 const product1 = document.querySelector('.product__new--1');
 const product2 = document.querySelector('.product__new--2');
+
+const bttns = document.querySelectorAll(".btn");
+const nav = document.getElementById('hdrNav');
+	bttns.forEach((bttn) => {
+		bttn.addEventListener("click", () => {
+		const currentState = bttn.getAttribute("data-state");
+		if (!currentState || currentState === "closed") {
+			bttn.setAttribute("data-state", "opened");
+			bttn.setAttribute("aria-expanded", "true");
+			nav.style.display = 'flex';
+	nav.style.visibility = 'visible';
+	nav.style.opacity = 1;
+			nav.style.animation = "reveal 900ms ease-in-out forwards";
+			} else {
+			bttn.setAttribute("data-state", "closed");
+			bttn.setAttribute("aria-expanded", "false");
+			nav.style.animation = "hide 900ms ease-in-out forwards";
+		}
+	});
+	});
