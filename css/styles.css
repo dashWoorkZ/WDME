@@ -6,27 +6,27 @@
 
     --gold: hsl(51, 100%, 50%);
     --blue: hsl(240, 100%, 50%);
-    --darkblue: rgb(53, 22, 128);
-    --purple: hsl(300, 100%, 25%);
-    --light-purple: hsl(293, 38%, 67%);
+    --darkblue: #35157e;
+    --light-purple: hsl(294, 80%, 86%);
     --green: hsl(120, 100%, 25%);
-    --yellow: hsl(60, 100%, 50%);
     --orange: hsl(39, 100%, 50%);
-    --red: hsl(0, 100%, 50%);
-    --brown: hsl(0, 59%, 41%);
-    --beige: hsl(60, 56%, 91%);
+    --beige: hsl(60, 57%, 91%);
     --dodgerblue: hsl(210, 100%, 56%);
     --skyblue: hsl(197, 71%, 73%);
-    --antiquewhite: hsl(34, 78%, 91%);
+    --antiquewhite: #faead6;
     --rebeccapurple: hsl(270, 50%, 40%);
     --orangered: hsl(16, 100%, 50%);
-    --li-hover-bg: hsla(300, 100%, 25%, 0.3);
+    --li-hover-bg: hsl(300, 78%, 9%);
+    --logo-element-bg-w: hsl(from var(--dodgerblue) h s calc(l - 5));
+    --logo-element-bg-d: hsl(from var(--dodgerblue) h s calc(l + 25));
+    --logo-element-bg-m: hsl(from var(--dodgerblue) h s calc(l + 27.5));
+    /* --logo-element-bg-e: hsl(from var(--dodgerblue) h s calc(l + 35)); */
     --maxWidth: 100svw;
-    --maxHeight: 100svh;
-    --inline-padding: 1.5rem 2.5rem;  
+    --pad025: 0.25rem;
     --pad05: 0.5rem;
     --pad1: 1rem;
     --pad2: 2rem;
+
      
 }
 
@@ -46,6 +46,7 @@
     box-sizing: border-box;
     outline: none;
     border: none;
+    text-wrap: balance;
 }
 
 html {
@@ -242,12 +243,13 @@ header section {
             transition: all 1000ms ease-in-out;
             padding-block: 0.5rem;
             padding-inline: 1rem;
-            
+            background-color: transparent;
         }
           
         & :hover {
             color: var(--beige);
-            text-shadow: 0 -0.1rem 0.4rem var(--blue);
+            text-shadow: 0 -0.2rem 0.2rem  var(--blue), -0.2rem -0.2rem 0.2rem var(--rebeccapurple);
+            background-color: var(--dodgerblue);
         }
     } 
 }
@@ -300,13 +302,14 @@ aside {
     line-height: 1.2;
     font-weight: 800;
     color: var(--dodgerblue);
-    text-shadow: 0 0.2rem 0.2rem var(--gold), 0.2rem 0.2rem 0.2rem var(--green);
+    text-shadow: 0 0.2rem 0.2rem var(--gold), 0.2rem 0.4rem 0.2rem var(--green);
     font-size: clamp(1.5rem, 1.75rem, 2rem);
     text-align: center;
+    transition: all 1000ms ease;
 
         &:hover {
-            color: var(--green);
-            text-shadow: 0 0.2rem 0.2rem  var(--antiquewhite), -0.2rem 0.2rem 0.2rem var(--orangered);
+            color: var(--skyblue);
+            text-shadow: 0 -0.2rem 0.2rem  var(--dodgerblue), 0.2rem -0.2rem 0.2rem var(--blue);
 
         }
 }
@@ -414,15 +417,7 @@ aside {
     }
 
     #login h1 {
-
-        color: var(--gold);
-        text-shadow: 0 0.1rem 0.4rem var(--rebeccapurple);
         font-size: 5rem;
-    
-        &:hover {
-            color: var(--green);
-            text-shadow: 0 -0.2rem 0.2rem  var(--antiquewhite), -0.2rem 0.2rem 0.2rem var(--orangered);
-        }
     }
               
     #hdrNav {
@@ -473,13 +468,13 @@ aside {
         border: 0.2rem solid var(--blue);
         border-radius: 0.4rem;
         max-width: 15rem;
-        transition: all 500ms ease;
+        transition: all 1000ms ease;
     }
 
 
     #hdrNav li:hover {
         border: 0.2rem solid var(--rebeccapurple);
-        background-color: var(--li-hover-bg);
+        background-color: var(--beige);
     }
     #hdrNav li a {
         text-decoration: none;
@@ -490,15 +485,13 @@ aside {
         line-height: 1.5;
         color: var(--clr-primary);
         text-shadow: 0 0.1rem 0.2rem var(--gold);
-        transition: all 500ms ease-in-out;
+        transition: all 1000ms ease-in-out;
         background-color: transparent;
     }
 
     #hdrNav li a:hover {
         color: var(--gold);
         text-shadow: 0 0.1rem 0.2rem var(--blue);
-        transition: all 500ms ease-in-out;
-    
     }
 
     .button-three {
@@ -506,9 +499,9 @@ aside {
         opacity: 1;
         visibility: visible;
         background: transparent;
-        border: 10px solid var(--button-color, #bc0fd3);
+        border: 0.624rem solid var(--button-color, var(--rebeccapurple));
         border-radius: 1rem;
-        --button-color: rgba(0, 9, 128, 0.4);
+        --button-color: var(--rebeccapurple);
         overflow: hidden;
     }
 
@@ -534,12 +527,12 @@ aside {
     .btn {
         rotate: 0;
         scale: 1;
-        max-width: 14.5rem;
+        max-width: 10rem;
         transition: all 500ms ease-in-out;
     }
 
     .btn:hover {
-        --button-color: var(--orange);
+        --button-color: var(--rebeccapurple);
         rotate:360deg;
         scale: .8;
     }
@@ -550,7 +543,7 @@ aside {
         color: var(--blue);
         text-shadow: 0 0.025rem 1rem var(--rebeccapurple);
         background-color: var(--skyblue);
-        border: 0.1rem solid var(--rebeccapurple);
+        border: 0.2rem solid var(--rebeccapurple);
         text-transform: capitalize;
         padding: 0.5rem 1rem;
         cursor: pointer;
@@ -563,7 +556,7 @@ aside {
         color: rgb(37, 2, 48);
         text-shadow: 0 0.025rem 1rem var(--darkblue);
         background-color: var(--light-purple);
-        border: 0.1rem solid var(--rebeccapurple);
+        border: 0.2rem solid var(--rebeccapurple);
         cursor: pointer;
         transition: all 500ms;
     }
