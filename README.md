@@ -1,4 +1,5 @@
 <img src="imgs/wdmeLogo_sm.png"> 
+[Live Demo](http://dashwoorkz.ca/wdme/)
 # WDME
 Without Prejudice - All Rights Reserved - UCC 1-301
 Development of online course material, Web Design Made Easy.
