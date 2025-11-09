@@ -1,3 +1,4 @@
+/*===/// Preset CSS3 \\\=== */
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 /* ========== Presets ============= */
@@ -25,9 +26,7 @@
     --pad025: 0.25rem;
     --pad05: 0.5rem;
     --pad1: 1rem;
-    --pad2: 2rem;
-
-     
+    --pad2: 2rem;   
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -100,7 +99,7 @@ button {
     text-wrap: wrap;
 }
 
-/*===/// End Preset CSS \\\=== */
+/*===/// End Preset CSS3 \\\=== */
 
 /*===/// Interactive Classes ===\\\ */
 
@@ -327,6 +326,9 @@ aside {
     border-radius: 0.5rem;
 }
 
+/*===///  End Content Based CSS \\\=== */
+
+/*===///  @Media CSS \\\=== */
 @media (max-width: 25rem) {
         
     header,
