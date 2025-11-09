@@ -1,7 +1,7 @@
 ﻿WebSite Notest
 
 ![WDME Logo](../imgs/wdmeLogo_sm.png)
-[Live Demo]([http://dashwoorkz.ca/wdme/figma_templates/webSite_Notes.html]())
+[Live Demo]([http://dashwoorkz.ca/wdme/figma_templates/webSite_Notes.html]
 
 # Web Design Made Easy VLOG I
 
