@@ -11,36 +11,43 @@
     <title>Web Design Made Easy</title>
 </head>
 <body>
+    <!-- Landing Class: Document wrapper -->
     <div class="landing">
-
+        <!-- Header: Typically holds a Navigation Menu, Brand ID, Time Display, Brand Logo, Announcements  -->
         <header>
-            <img src="imgs/wdmeLogo_sm.png" alt="Brand Name Logo" class="logo">
+            
             <section>
-                <aside id="login">
-                    <h1 class="brandNameTitle">
+                <aside id="brand">
+                    <!-- Inline Image -->
+                    <img loading="lazy" src="imgs/wdmeLogo_sm.png" alt="Brand Name Logo" class="logo">
+                    <!-- Main Section of Header -->
+                    <h1>
                         dashWoorkZ
-                    </h1>
-                    
+                    </h1>           
                 </aside>
+                <!-- Hamburger Menu: Animated Navigation Menu: Utilizes Javascript for Activation  -->
                 <aside id="navigation">
-                    <button class="btn button-three" aria-controls="primary-navigation" aria-expanded="false">
+                    <button class="btn prime__nav" aria-controls="primary-navigation" aria-expanded="false">
                         <svg stroke="var(--button-color)" fill="none" class="hamburger" viewBox="-10 -10 120 120" width="250">
                         <path class="line" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" d="m 20 40 h 60 a 1 1 0 0 1 0 20 h -60 a 1 1 0 0 1 0 -40 h 30 v 70">
                         </path>
                         </svg>
-                    </button> 
+                    </button>
+                    <!-- Navigation List   --> 
                     <nav id="hdrNav">
                         <li class="hdrNav__link-1"><a href="/">Home</a></li>
                         <li class="hdrNav__link-2"><a href="https://dashwoorkz.ca/sovLiv/" target="_blank">Sovereign Living</a></li>
                         <li class="hdrNav__link-3"><a href="https://dashwoorkz.ca/everythingDash/" target="_blank">dashWoorkZ Online</a></li>
                         <li class="hdrNav__link-4"><a href="https://everythingDash.creator-spring.com/" target="_blank">TeeSpring</a></li>
                         <li class="hdrNav__link-5"><a href="https://www.youtube.com/watch?v=WZ1Ec5xeR7c" target="_blank">About</a></li>
-                    </nav> 
-                    <button class="loginBtn">Log In</button>
+                    </nav>
+                    <!-- Button: User based action required  --> 
+                    <a href="figma_templates/webSite_Notes.html"><button class="notesBtn">Notes</button></a>
                 </aside>
             </section>
     </header>
         <main class="grid-auto-fit">
+            <!-- Secondary Navigation List  -->
             <aside class="links">
                 <ul>
                     <li class="links__link--1">
@@ -57,6 +64,7 @@
                     </li>
                 </ul>
             </aside>
+            <!-- Section to display products, announcements -->
             <div class="products">
                 <section class="product__new--1">
                     <h2>Rasberry Pi 4 Netwok Administration</h2>
@@ -66,6 +74,7 @@
                 </section>
             </div>
         </main>
+        <!-- End of document statements, Privacy Policy, Terms of Service, additional advertising  -->
         <footer>
             <div>
                 <span>dashwoorkz &copy;&nbsp;2024</span><span>dashWoorkZ Sovereign Society&nbsp;&nbsp;Since 2023</span>
@@ -73,5 +82,6 @@
         </footer>
     </div>
 </body>
+<!--  Link to Javascript file used to activate Animated Hamburger Menu -->
 <script src="js/app.js"></script>
 </html>
