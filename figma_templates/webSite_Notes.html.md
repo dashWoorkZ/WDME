@@ -1,10 +1,10 @@
 ﻿WebSite Notest
 
-![WDME Logo](../imgs/wdmeLogo_sm.png)
+[![WDME Logo](../imgs/wdmeLogo_sm.png)](../index.html)
 
-# Web Design Made Easy VLOG I
+# Web Design Made Easy
 
-### From Concept to Conception
+### VLOG 1 From Concept to Conception
 
 #### \*Notes from the Author\*
 
@@ -14,16 +14,15 @@ A list of selected elements preset with attributes conditional throughout the do
 
 Navigation
 
-There are two(2) navigation elements in this design:
+## Two(2) navigation elements are used:
 
--   #### Hamburger Menu
-    
-    an animated navigation list, toggled by the USER taking an ACTION
-    
--   #### Standard NAV
-    
-    a standard navigation element with horizontal display.
-    
+#### Hamburger NAV
+
+an animated navigation list, toggled by the USER taking an ACTION
+
+#### Standard NAV
+
+a standard navigation element.
 
 Images
 
@@ -62,7 +61,6 @@ I actually came up with the design of the CSS3 page while editing all the crap o
 
 So, if you would like, you can use my notes and the FIGMA type images to try and create the web page, or follow along with the video, i will go through each section mentioned, i just might not include all the inputing of the CSS3,
 
-i hope you like this little project-in-the-making, and join me as i explore how and why i even decided to create this in the first place, and how i decided to turn it into what it has become
+i hope to continue this series into just what can we build into our websites, and how can we utilize the power of the web technologies to make the process as simple and understandable as possible, to ourselves and others, this is an ongoing process and experiment in action, i hope you can join me.
 
-:Dash: La Londe  
-dash@dashwoorkz.ca
+:Dash: La Londe dash@dashwoorkz.ca
