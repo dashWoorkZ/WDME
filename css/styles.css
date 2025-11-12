@@ -1,8 +1,6 @@
 /*===/// Preset CSS3 \\\=== */
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-/* ========== Presets ============= */
-
 :root {
     --gold: hsl(51, 100%, 50%);
     --blue: hsl(240, 100%, 50%);
@@ -100,6 +98,7 @@ button {
 
 /*===/// End Preset CSS3 \\\=== */
 
+
 /*===/// Interactive Classes ===\\\ */
 
 .show {
@@ -115,6 +114,7 @@ button {
 }
 
 /*===/// End Interactive Classes ===\\\ */
+
 
 /*===/// Grid and Flex Presets ===\\\ */
 
@@ -145,6 +145,7 @@ li, header section, ul {
 }
 
 /*===/// End Grid and Flex Presets ===\\\ */
+
 
 /*===/// Content Based CSS \\\=== */
 
@@ -234,7 +235,6 @@ header section {
         &:hover {
             color: var(--skyblue);
             text-shadow: 0 -0.2rem 0.2rem  var(--dodgerblue), 0.2rem -0.2rem 0.2rem var(--blue);
-
         }
 }
 
@@ -328,6 +328,7 @@ aside {
 }
 
 /*===///  End Content Based CSS \\\=== */
+
 
 /*===///  @Media CSS \\\=== */
 @media (max-width: 31.35rem) {
