@@ -4,7 +4,6 @@
 /* ========== Presets ============= */
 
 :root {
-
     --gold: hsl(51, 100%, 50%);
     --blue: hsl(240, 100%, 50%);
     --darkblue: #35157e;
@@ -21,7 +20,7 @@
     --logo-element-bg-w: hsl(from var(--dodgerblue) h s calc(l - 5));
     --logo-element-bg-d: hsl(from var(--dodgerblue) h s calc(l + 25));
     --logo-element-bg-m: hsl(from var(--dodgerblue) h s calc(l + 27.5));
-    /* --logo-element-bg-e: hsl(from var(--dodgerblue) h s calc(l + 35)); */
+
     --maxWidth: 100svw;
     --pad025: 0.25rem;
     --pad05: 0.5rem;
@@ -141,7 +140,7 @@ button {
 }
 
 header, footer, footer div, aside,
-li, header section, .links ul {
+li, header section, ul {
     display: inline flex;
 }
 
@@ -212,8 +211,48 @@ header section {
     align-items: baseline;
 }
 
+#brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 5rem;
+    inline-size: 100%;
+    /* place-content:center; */
+}
+        
+#brand h1 {
+    letter-spacing: 1rem;
+    line-height: 1.2;
+    font-weight: 800;
+    color: var(--dodgerblue);
+    text-shadow: 0 0.05rem 0.2rem var(--gold), 0.2rem 0.05rem 0.2rem var(--green);
+    font-size: clamp(1.5rem, 1.75rem, 2rem);
+    text-align: center;
+    transition: all 1000ms ease;
+
+        &:hover {
+            color: var(--skyblue);
+            text-shadow: 0 -0.2rem 0.2rem  var(--dodgerblue), 0.2rem -0.2rem 0.2rem var(--blue);
+
+        }
+}
+
+.notesBtn {
+    border: 0.2rem groove var(--dodgerblue);
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    font-size: clamp(1rem, 1.2ch, 1.5rem);
+    background-color: antiquewhite;
+    color: var(--dodgerblue);
+    text-shadow: 0 0.1rem 0.2rem var(--blue);
+    padding-block: 0.5rem;
+    padding-inline: 1rem;
+    border-radius: 0.5rem;
+}
+
 .navigation {
-    height: 6.5rem;
+    max-height: 6.5rem;
 }
     
 .links {
@@ -225,7 +264,6 @@ header section {
     gap: 1rem;
     width: 100%;
             
-        
     & li {
         border: 0.2rem ridge var(--gold);
         filter: drop-shadow(0 0.1rem 0.2rem rebeccapurple, 0 -0.1rem 0.2rem var(--gold));
@@ -253,6 +291,19 @@ header section {
     } 
 }
 
+aside {
+        max-width: calc(var(--maxWidth) - (var(--pad1) * 2));
+        inline-size: 100%;
+        height: auto;
+        gap: 1rem;
+        position: relative;
+        padding: var(--pad05) var(--pad1);
+    }
+    
+.logo {
+    max-inline-size: 10rem;
+    }
+
 .products {
     display: flex;
     flex-direction: column;
@@ -276,67 +327,17 @@ header section {
         }  
 }
 
-aside {
-        max-width: calc(var(--maxWidth) - (var(--pad1) * 2));
-        inline-size: 100%;
-        height: auto;
-        gap: 1rem;
-        position: relative;
-        padding: var(--pad05) var(--pad1);
-    }
-    
-.logo {
-    max-inline-size: 10rem;
-    }
-
-#login {
-    display: grid;
-    min-height: 5rem;
-    inline-size: 100%;
-    place-content:center;
-}
-        
-#login h1 {
-    letter-spacing: 1rem;
-    line-height: 1.2;
-    font-weight: 800;
-    color: var(--dodgerblue);
-    text-shadow: 0 0.2rem 0.2rem var(--gold), 0.2rem 0.4rem 0.2rem var(--green);
-    font-size: clamp(1.5rem, 1.75rem, 2rem);
-    text-align: center;
-    transition: all 1000ms ease;
-
-        &:hover {
-            color: var(--skyblue);
-            text-shadow: 0 -0.2rem 0.2rem  var(--dodgerblue), 0.2rem -0.2rem 0.2rem var(--blue);
-
-        }
-}
-
-.loginBtn {
-    border: 0.2rem groove var(--dodgerblue);
-    font-weight: 700;
-    letter-spacing: 0.1rem;
-    font-size: clamp(1rem, 1.2ch, 1.5rem);
-    background-color: antiquewhite;
-    color: var(--dodgerblue);
-    text-shadow: 0 0.1rem 0.2rem var(--blue);
-    padding-block: 0.5rem;
-    padding-inline: 1rem;
-    border-radius: 0.5rem;
-}
-
 /*===///  End Content Based CSS \\\=== */
 
 /*===///  @Media CSS \\\=== */
-@media (max-width: 25rem) {
+@media (max-width: 31.35rem) {
         
     header,
     header section, #navigation {
         flex-direction: column;
     }
 
-    .button-three {
+    .prime__nav {
         display: none;
         opacity: 0;
         visibility: hidden;
@@ -359,16 +360,19 @@ aside {
         visibility: visible;
     }
 
-    #hdrNav li {
-        border: 0.2rem solid var(--green);
-        border-radius: 0.5rem;
-        padding-inline: 1rem;
-        padding-block: 0.5rem;
+       #hdrNav li {
+        padding-inline: var(--pad1);
+        padding-block: var(--pad05);
+        list-style: none;
+        border: 0.2rem solid var(--blue);
+        border-radius: 0.4rem;
+        max-width: 15rem;
+        transition: all 1000ms ease;
         font-weight: 700;
     }
 }
 
-@media (min-width: 25rem) {
+@media screen and (width > 60rem) {
 
     header {
         max-inline-size: calc(81.25rem - var(--pad2));
@@ -403,9 +407,9 @@ aside {
         left: 1rem;
     }
         
-    .navigation {
-        height: 6.5rem;
-    }
+    /* .navigation {
+        max-height: 6.5rem;
+    } */
         
     .links {
         inline-size: 80rem;
@@ -418,7 +422,7 @@ aside {
         inline-size: 100%;  
     }
 
-    #login h1 {
+    #brand h1 {
         font-size: 5rem;
     }
               
@@ -496,7 +500,7 @@ aside {
         text-shadow: 0 0.1rem 0.2rem var(--blue);
     }
 
-    .button-three {
+    .prime__nav {
         display: block inline;
         opacity: 1;
         visibility: visible;
@@ -507,21 +511,21 @@ aside {
         overflow: hidden;
     }
 
-    .button-three .hamburger {
+    .prime__nav .hamburger {
         transition: translate 1s, rotate 1s;
     }
 
-    .button-three[aria-expanded="true"] .hamburger {
+    .prime__nav[aria-expanded="true"] .hamburger {
         translate: 5px -5px;
         rotate: 0.122turn;
     }
 
-    .button-three .line {
+    .prime__nav .line {
         transition: 1s;
         stroke-dasharray: 60 31 60 300;
     }
 
-    .button-three[aria-expanded="true"] .line {
+    .prime__nav[aria-expanded="true"] .line {
         stroke-dasharray: 60 107 60 300;
         stroke-dashoffset: -90;
     }
